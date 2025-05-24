@@ -1,0 +1,187 @@
+.desktop-menu{
+  background-color: #007e38;
+  color: white;
+  font-size: 20px;
+}
+.mobile-navbar{
+  background-color: #007e38;
+  color:white;
+}
+#mobile-menu {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+  color: black;
+  background-color: #ccf4de;
+}
+
+#mobile-menu.menu-open {
+  max-height: 500px; /* Adjust based on your content height */
+  transition: max-height 0.3s ease-in;
+}
+
+/* Hamburger icon animation */
+#mobile-menu-button .hamburger-line {
+  transition: transform 0.3s ease, opacity 0.2s ease;
+  transform-box: fill-box;
+  transform-origin: center;
+  color:white;
+}
+
+#mobile-menu-button.menu-open .hamburger-line:nth-child(1) {
+  transform: translateY(6px) rotate(45deg);
+}
+
+#mobile-menu-button.menu-open .hamburger-line:nth-child(2) {
+  opacity: 0;
+}
+
+#mobile-menu-button.menu-open .hamburger-line:nth-child(3) {
+  transform: translateY(-6px) rotate(-45deg);
+}
+
+/* Menu item styles */
+.menu-item {
+  transition: all 0.3s ease;
+  color: inherit;
+  text-decoration: none;
+  position: relative;
+  display: inline-block;
+}
+
+.menu-item::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -4px;
+  left: 50%;
+  background-color: #ffffff;
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.menu-item:hover {
+  color: yellow;
+}
+
+.menu-item:hover::after {
+  width: 100%;
+}
+.mobile-menu-item:hover {
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+}
+/* Desktop specific */
+@media (min-width: 768px) {
+  .menu-item {
+    padding: 0.25rem 0.5rem;
+  }
+}
+
+/* Mobile specific */
+@media (max-width: 767px) {
+  .mobile-menu-item {
+    display: block;
+    padding: 0.75rem 1rem;
+    border-top: 1px solid #f3f4f6; /* border-gray-100 */
+  }
+  
+  .menu-item::after {
+    bottom: 0.5rem;
+  }
+}
+
+/* Header styles */
+.logo {
+  max-width: 70px;
+  height: auto;
+}
+
+.logo img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Hero Section Styles */
+.hero-section {
+  background-color: #ffffff;
+}
+
+.hero-image-container {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 400px;
+}
+
+.image-slider {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.slider-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transform: translateX(100%);
+  transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+}
+
+.slider-image.active {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.slider-image.prev {
+  transform: translateX(-100%);
+  opacity: 0;
+}
+
+@media (max-width: 767px) {
+  .hero-section {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+  
+  .hero-image-container {
+    margin-top: 2rem;
+    height: 300px;
+  }
+}
+
+/* buttons */
+.btn-appointment{
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 16px;
+  padding: 0.7em 1.4em 0.7em 1.1em;
+  color: rgb(243, 234, 234);
+  background: #ad5389;
+  background: linear-gradient(0deg, #007e38 0%, rgb(71, 208, 83) 100%);
+  border: none;
+  box-shadow: 0 0.7em 1.5em -0.5em #14a73e98;
+  letter-spacing: 0.05em;
+  border-radius: 10px;
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.btn-appointment:hover {
+  box-shadow: 0 0.5em 1.5em -0.5em #14a73e98;
+  color: white;
+  scale: 1.01;
+  transition: linear 0.4ms;
+}
+
+.btn-appointment:active {
+  box-shadow: 0 0.3em 1em -0.5em #14a73e98;
+}

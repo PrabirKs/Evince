@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Evince Clinic</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+    />
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body class="bg-white text-gray-800">
+    <!-- Header Top Bar -->
+    <div
+      class="flex flex-col md:flex-row justify-between items-center px-4 py-2 text-sm"
+    >
+      <div class="left flex flex-row items-center space-x-2">
+        <div class="logo">
+          <img src="./images/logo.jpg" alt="ewr" />
+        </div>
+        <div class="font-bold text-lg mb-2 md:mb-0 hidden md:block">
+          Evince Pyschological Clinic
+        </div>
+      </div>
+      <div class="right">
+        <div class="flex items-center space-x-2 md:space-x-4">
+          <a href="#" class="text-blue-500 hover:underline">Facebook</a>
+          <a href="#" class="text-blue-400 hover:underline">Twitter</a>
+          <a href="#" class="text-pink-600 hover:underline">Instagram</a>
+          <button
+            class="bg-red-500 text-white px-2 md:px-3 py-1 rounded hover:bg-red-600 transition-colors duration-200"
+          >
+            Donate
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="mobile-navbar shadow-md">
+      <div class="">
+        <!-- Mobile menu button -->
+        <div class="md:hidden flex justify-between items-center py-3 px-4">
+          <span class="font-bold">Evince Pyschological Clinic</span>
+          <button
+            id="mobile-menu-button"
+            class="text-gray-500 hover:text-gray-600 focus:outline-none"
+          >
+            <svg
+              class="h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                class="hamburger-line"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16"
+              />
+              <path
+                class="hamburger-line"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 12h16"
+              />
+              <path
+                class="hamburger-line"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 18h16"
+              />
+            </svg>
+          </button>
+        </div>
+
+        <!-- Desktop menu -->
+        <ul
+          class="desktop-menu hidden md:flex justify-center space-x-4 lg:space-x-6 p-4 text-sm md:text-md font-medium"
+        >
+          <li><a href="#home" class="menu-item">Home</a></li>
+          <li><a href="#about" class="menu-item">About Us</a></li>
+          <li><a href="#centers" class="menu-item">Centers</a></li>
+          <li><a href="#services" class="menu-item">Services</a></li>
+          <li><a href="#internship" class="menu-item">Internship</a></li>
+          <li><a href="#contact" class="menu-item">Contact</a></li>
+          <li><a href="#blog" class="menu-item">Blog</a></li>
+          <li><a href="#gallery" class="menu-item">Gallery</a></li>
+        </ul>
+
+        <!-- Mobile menu (hidden by default) -->
+        <ul id="mobile-menu" class="md:hidden py-0 space-y-0 bg-gray-100">
+          <li><a href="#home" class="mobile-menu-item">Home</a></li>
+          <li><a href="#about" class="mobile-menu-item">About Us</a></li>
+          <li><a href="#centers" class="mobile-menu-item">Centers</a></li>
+          <li><a href="#services" class="mobile-menu-item">Services</a></li>
+          <li><a href="#internship" class="mobile-menu-item">Internship</a></li>
+          <li><a href="#contact" class="mobile-menu-item">Contact</a></li>
+          <li><a href="#blog" class="mobile-menu-item">Blog</a></li>
+          <li><a href="#gallery" class="mobile-menu-item">Gallery</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section py-12 px-4 md:px-8 lg:px-16">
+      <div class="mx-auto">
+        <div class="flex flex-col md:flex-row items-center gap-8">
+          <!-- Left side - Text content -->
+          <div class="w-full md:w-1/2 text-center md:text-left">
+            <h1
+              class="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-800 mb-4"
+            >
+              Welcome to Evince Psychological Clinic
+            </h1>
+            <p class="text-lg md:text-xl text-gray-600 mb-6">
+              Providing professional mental health services with compassion and
+              expertise. Your journey to better mental health starts here.
+            </p>
+            <button class="btn-appointment">Book an Appointment</button>
+          </div>
+          <!-- Right side - Image -->
+          <div class="w-full md:w-1/2">
+            <div class="hero-image-container">
+              <div class="image-slider">
+                <img
+                  src="./images/slider/slider1.jpg"
+                  alt="Psychological Clinic"
+                  class="slider-image active"
+                />
+                <img
+                  src="./images/slider/slider2.jpg"
+                  alt="Psychological Clinic"
+                  class="slider-image"
+                />
+                <img
+                  src="./images/slider/slider3.jpg"
+                  alt="Psychological Clinic"
+                  class="slider-image"
+                />
+                <img
+                  src="./images/slider/slider4.jpg"
+                  alt="Psychological Clinic"
+                  class="slider-image"
+                />
+                <img
+                  src="./images/slider/slider5.jpg"
+                  alt="Psychological Clinic"
+                  class="slider-image"
+                />
+                <img
+                  src="./images/slider/slider6.jpg"
+                  alt="Psychological Clinic"
+                  class="slider-image"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="./js/navabar.js"></script>
+    <script src="./js/hero-slider.js"></script>
+  </body>
+</html>
