@@ -1,18 +1,18 @@
-.desktop-menu{
+.desktop-menu {
   background-color: #007e38;
   color: white;
   font-size: 20px;
 }
-.mobile-navbar{
+.mobile-navbar {
   background-color: #007e38;
-  color:white;
+  color: white;
 }
 #mobile-menu {
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.3s ease-out;
   color: black;
-  background-color: #ccf4de;
+  background-color: #4aff9c;
 }
 
 #mobile-menu.menu-open {
@@ -25,7 +25,7 @@
   transition: transform 0.3s ease, opacity 0.2s ease;
   transform-box: fill-box;
   transform-origin: center;
-  color:white;
+  color: white;
 }
 
 #mobile-menu-button.menu-open .hamburger-line:nth-child(1) {
@@ -50,7 +50,7 @@
 }
 
 .menu-item::after {
-  content: '';
+  content: "";
   position: absolute;
   width: 0;
   height: 2px;
@@ -86,7 +86,7 @@
     padding: 0.75rem 1rem;
     border-top: 1px solid #f3f4f6; /* border-gray-100 */
   }
-  
+
   .menu-item::after {
     bottom: 0.5rem;
   }
@@ -103,10 +103,6 @@
   width: 100%;
   height: auto;
   object-fit: contain;
-}
-
-.header-title{
-  color: #007e38;
 }
 
 /* Fixed Header and Navbar */
@@ -191,7 +187,7 @@ body {
   background-color: #ffffff;
 }
 .hero-section h1 {
-  font-family: 'Playfair Display', serif;
+  font-family: "Playfair Display", serif;
   letter-spacing: -0.02em;
 }
 
@@ -252,7 +248,7 @@ body {
     padding-top: 2rem;
     padding-bottom: 2rem;
   }
-  
+
   .hero-image-container {
     margin-top: 2rem;
     height: 300px;
@@ -260,7 +256,7 @@ body {
 }
 
 /* buttons */
-.btn-appointment{
+.btn-appointment {
   font-family: inherit;
   font-weight: 500;
   font-size: 16px;
@@ -290,20 +286,20 @@ body {
 }
 
 /* about section */
-.about-section{
+.about-section {
   background-color: #7ee8fb97;
   position: relative;
   overflow: hidden;
 }
 
 .about-section::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url('../images/svg/contact-background.svg');
+  background-image: url("../images/svg/contact-background.svg");
   background-size: cover;
   background-position: center;
   opacity: 0.5;
@@ -359,7 +355,8 @@ body {
   height: 400px;
   border-radius: 0.5rem;
   overflow: hidden;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
 }
 
 @media (max-width: 768px) {
@@ -367,11 +364,11 @@ body {
     height: 300px;
     margin-bottom: 1.5rem;
   }
-  
+
   .center-card {
     padding: 1rem;
   }
-  
+
   .nav-btn {
     padding: 0.4rem 0.8rem;
     font-size: 0.9rem;
@@ -379,20 +376,20 @@ body {
 }
 
 /* Service Cards Styles */
-.service-section{
+.service-section {
   background-color: #4fe2fcc7;
   position: relative;
   overflow: hidden;
 }
 
 .service-section::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url('../images/svg/contact-background.svg');
+  background-image: url("../images/svg/contact-background.svg");
   background-size: cover;
   background-position: center;
   opacity: 0.5;
@@ -426,7 +423,6 @@ body {
 .service-card img {
   transition: transform 0.3s;
 }
-
 
 .service-card h3 {
   transition: color 0.3s;
@@ -464,7 +460,7 @@ body {
 }
 
 #internship::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -483,13 +479,13 @@ body {
   position: relative;
   overflow: hidden;
 }
-.apply-btn:hover{
+.apply-btn:hover {
   background-color: #18a406;
   color: black;
 }
 
 .apply-btn::after {
-  content: '';
+  content: "";
   position: absolute;
   top: 50%;
   left: 50%;
@@ -510,7 +506,7 @@ body {
   #internship .space-y-4 {
     margin-bottom: 2rem;
   }
-  
+
   #internship img {
     margin-top: 2rem;
     color: #59bed4;
@@ -527,7 +523,7 @@ body {
 }
 
 .contact-section::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -684,12 +680,12 @@ body {
   .contact-section {
     padding: 2rem 0;
   }
-  
+
   .contact-info-card,
   .contact-form {
     margin-bottom: 2rem;
   }
-  
+
   .contact-image {
     height: 250px;
   }
@@ -704,13 +700,13 @@ body {
 }
 
 .blog-section::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url('../images/svg/blog-background.svg');
+  background-image: url("../images/svg/blog-background.svg");
   background-size: cover;
   background-position: center;
   opacity: 0.5;
@@ -809,11 +805,11 @@ body {
   .blog-section {
     padding: 2rem 0;
   }
-  
+
   .blog-card {
     margin-bottom: 1.5rem;
   }
-  
+
   .blog-image {
     height: 180px;
   }
@@ -859,7 +855,7 @@ body {
 }
 
 .gallery-header h2::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: -10px;
   left: 50%;
@@ -980,17 +976,17 @@ body {
   .gallery-section {
     padding: 2rem 0;
   }
-  
+
   .gallery-nav-btn {
     width: 32px;
     height: 32px;
   }
-  
+
   .gallery-nav-btn svg {
     width: 20px;
     height: 20px;
   }
-  
+
   .gallery-slider {
     aspect-ratio: 4/3;
   }
@@ -1008,7 +1004,7 @@ footer {
 }
 
 .footer-section h3::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: 0;
   left: 0;
@@ -1076,16 +1072,16 @@ footer .text-gray-400:hover {
   .footer-section {
     margin-bottom: 2rem;
   }
-  
+
   .newsletter form {
     flex-direction: column;
   }
-  
+
   .newsletter input {
     border-radius: 0.5rem;
     margin-bottom: 0.5rem;
   }
-  
+
   .newsletter button {
     border-radius: 0.5rem;
   }
@@ -1120,9 +1116,32 @@ footer .text-gray-400:hover {
     width: 28px;
     height: 28px;
   }
-  
+
   .social-icon-header svg {
     width: 16px;
     height: 16px;
+  }
+}
+
+/* Ensure long Gmail addresses in the footer are truncated with ellipsis */
+@media (min-width: 1024px) {
+  .footer-section .flex.items-center.space-x-3 span {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 200px;
+    display: inline-block;
+  }
+
+  .footer-section .flex.items-center.space-x-3 span:hover {
+    display: inline-block;
+    max-width: 370px;
+  }
+}
+
+/* Adjust mobile navbar position */
+@media (max-width: 767px) {
+  .mobile-navbar {
+    top: 48px; 
   }
 }
