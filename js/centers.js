@@ -1,47 +1,37 @@
-document.addEventListener('DOMContentLoaded', function() {
-    const centerCards = document.querySelectorAll('.center-card');
-    const prevButton = document.getElementById('prev-center');
-    const nextButton = document.getElementById('next-center');
-    let currentIndex = 0;
+document.addEventListener("DOMContentLoaded", () => {
+    const cards = document.querySelectorAll(".center-card");
+    const container = document.querySelector(".centers-content");
+    let current = 0;
+    let intervalId;
 
-    // Function to update active center
-    function updateActiveCenter(index) {
-        centerCards.forEach(card => card.classList.remove('active'));
-        centerCards[index].classList.add('active');
-        
-        // Update button states
-        prevButton.disabled = index === 0;
-        nextButton.disabled = index === centerCards.length - 1;
-        
-        // Update button styles
-        prevButton.style.opacity = index === 0 ? '0.5' : '1';
-        nextButton.style.opacity = index === centerCards.length - 1 ? '0.5' : '1';
+    function showCard(index) {
+      cards.forEach((card, i) => {
+        if (i === index) {
+          card.classList.remove("hidden");
+          card.classList.add("active");
+        } else {
+          card.classList.add("hidden");
+          card.classList.remove("active");
+        }
+      });
     }
 
-    // Event listeners for navigation buttons
-    prevButton.addEventListener('click', () => {
-        if (currentIndex > 0) {
-            currentIndex--;
-            updateActiveCenter(currentIndex);
-        }
-    });
+    function startAutoSlide() {
+      intervalId = setInterval(() => {
+        current = (current + 1) % cards.length;
+        showCard(current);
+      }, 10000); 
+    }
 
-    nextButton.addEventListener('click', () => {
-        if (currentIndex < centerCards.length - 1) {
-            currentIndex++;
-            updateActiveCenter(currentIndex);
-        }
-    });
+    function stopAutoSlide() {
+      clearInterval(intervalId);
+    }
 
-    // Initialize the first center
-    updateActiveCenter(currentIndex);
+    // Start on load
+    showCard(current);
+    startAutoSlide();
 
-    // Add click event listeners to center buttons
-    document.querySelectorAll('.center-btn').forEach(button => {
-        button.addEventListener('click', function() {
-            const centerName = this.closest('.center-card').querySelector('h3').textContent;
-            // You can add navigation logic here to redirect to the specific center page
-            console.log(`Navigating to ${centerName} page`);
-        });
-    });
-}); 
+    // // Pause on hover, resume on mouse leave
+    // container.addEventListener("mouseenter", stopAutoSlide);
+    // container.addEventListener("mouseleave", startAutoSlide);
+  });
