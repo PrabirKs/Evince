@@ -607,7 +607,6 @@ body {
 
 .social-icon:hover {
   transform: translateY(-3px);
-  background-color: #006b30;
 }
 
 .social-icon svg {
@@ -1112,11 +1111,10 @@ footer .text-gray-400:hover {
 
 .social-icon-header:hover {
   color: white;
-  background-color: #007e38;
   transform: translateY(-2px);
 }
 
-.social-icon-header svg {
+.social-icon-header img {
   width: 20px;
   height: 20px;
 }

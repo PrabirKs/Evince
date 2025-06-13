@@ -1,0 +1,104 @@
+<!-- Header component-->
+<div class="header">
+  <div class="flex flex-col md:flex-row justify-between items-center px-4 py-2 text-sm">
+    <div class="left flex flex-row items-center space-x-2 hidden md:flex">
+      <div class="logo">
+        <img src="../images/logo.jpg" alt="ewr" />
+      </div>
+      <div class="font-bold text-lg mb-2 md:mb-0 hidden md:block text-green-700">
+        Evince Pyschological Clinic
+      </div>
+    </div>
+    <div class="right">
+      <div class="flex items-center space-x-2 md:space-x-4">
+        <a href="https://www.facebook.com/p/Evince-Psychological-Clinic-100085674934900" target="_blank" class="social-icon-header">
+          <img src="../images/header/facebook.png" title="facebook icons" alt="Facebook" style="width: 24px; height: 24px">
+        </a>
+        <a href="https://www.instagram.com/evince_clinic/" target="_blank" class="social-icon-header">
+          <img src="../images/header/instagram.png" title="instagram icons" alt="Instagram">
+        </a>
+        <a href="https://api.whatsapp.com/send?phone=917894285007" target="_blank" class="social-icon-header">
+          <img src="../images/header/whatsapp.png" title="whatsapp icons" alt="WhatsApp">
+        </a>
+        <a href="tel:+917978266320" class="social-icon-header">
+          <img src="../images/header/phone.png" title="phone icons" alt="Phone">
+        </a>
+        <button class="bg-red-500 text-white px-2 md:px-3 py-1 rounded hover:bg-red-600 transition-colors duration-200 hidden md:block">
+          Donate
+        </button>
+      </div>
+    </div>
+  </div>
+
+      <!-- Navbar -->
+    <nav class="mobile-navbar shadow-md">
+      <div class="">
+        <!-- Mobile menu button -->
+        <div class="md:hidden py-3 px-4 flex items-center justify-between">
+          <span class="font-bold header-title text-white"
+            >Evince Pyschological Clinic</span
+          >
+          <button
+            id="mobile-menu-button"
+            class="text-gray-500 hover:text-gray-600 focus:outline-none"
+          >
+            <svg
+              class="h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                class="hamburger-line"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16"
+              />
+              <path
+                class="hamburger-line"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 12h16"
+              />
+              <path
+                class="hamburger-line"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 18h16"
+              />
+            </svg>
+          </button>
+        </div>
+  
+        <!-- Desktop menu -->
+        <ul
+          class="desktop-menu hidden md:flex justify-center space-x-4 lg:space-x-6 p-4 text-sm md:text-md font-medium"
+        >
+          <li><a href="../index.html#home" class="menu-item">Home</a></li>
+          <li><a href="../index.html#about" class="menu-item">About Us</a></li>
+          <li><a href="../index.html#centers" class="menu-item">Centers</a></li>
+          <li><a href="../index.html#services" class="menu-item">Services</a></li>
+          <li><a href="../index.html#internship" class="menu-item">Internship</a></li>
+          <li><a href="../index.html#contact" class="menu-item">Contact</a></li>
+          <li><a href="../index.html#blog" class="menu-item">Blog</a></li>
+          <li><a href="../index.html#gallery" class="menu-item">Gallery</a></li>
+        </ul>
+  
+        <!-- Mobile menu (hidden by default) -->
+        <ul id="mobile-menu" class="md:hidden py-0 space-y-0 bg-green-400">
+          <li><a href="../index.html#home" class="mobile-menu-item">Home</a></li>
+          <li><a href="../index.html#about" class="mobile-menu-item">About Us</a></li>
+          <li><a href="../index.html#centers" class="mobile-menu-item">Centers</a></li>
+          <li><a href="../index.html#services" class="mobile-menu-item">Services</a></li>
+          <li><a href="../index.html#internship" class="mobile-menu-item">Internship</a></li>
+          <li><a href="../index.html#contact" class="mobile-menu-item">Contact</a></li>
+          <li><a href="../index.html#blog" class="mobile-menu-item">Blog</a></li>
+          <li><a href="../index.html#gallery" class="mobile-menu-item">Gallery</a></li>
+        </ul>
+      </div>
+    </nav>
+</div>
+
