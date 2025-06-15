@@ -32,7 +32,29 @@ const bindNavScript = () => {
       menu.setAttribute("aria-hidden", true);
     });
   });
+
+  // Function to update image paths
+  const updateImagePaths = () => {
+    // Determine if we're in a subdirectory
+    const isSubdirectory = window.location.pathname.includes('/pages/');
+    const basePath = isSubdirectory ? '../' : './'; // If subdirectory, use "../", else "./"
+
+    // Select all images inside social links
+    const images = document.querySelectorAll('.social-icon-header img, .logo img');
+
+    images.forEach((img) => {
+      let src = img.getAttribute('src');
+      console.log(
+        "path" , src, "update", basePath+ src.split("./")[1]
+      )
+      img.setAttribute('img',basePath+ src.split("./")[1] )
+    });
+  };
+
+  // Update image paths after the header has been loaded
+  updateImagePaths();
 };
+
 // Function to load the header component
 async function loadHeader() {
   try {
@@ -43,6 +65,8 @@ async function loadHeader() {
     const response = await fetch(`${basePath}components/header.html`);
     const html = await response.text();
     document.getElementById("header-container").innerHTML = html;
+
+    // Bind navigation script and update image paths
     bindNavScript();
   } catch (error) {
     console.error("Error loading header:", error);
