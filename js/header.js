@@ -37,7 +37,7 @@ const bindNavScript = () => {
   const updateImagePaths = () => {
     // Determine if we're in a subdirectory
     const isSubdirectory = window.location.pathname.includes('/pages/');
-    const basePath = isSubdirectory ? '../' : './'; // If subdirectory, use "../", else "./"
+    const basePath = isSubdirectory ? '../components/images/' : './components/images/'; // If subdirectory, use "../", else "./"
 
     // Select all images inside social links
     const images = document.querySelectorAll('.social-icon-header img, .logo img');
@@ -45,9 +45,9 @@ const bindNavScript = () => {
     images.forEach((img) => {
       let src = img.getAttribute('src');
       console.log(
-        "path" , src, "update", basePath+ src.split("./")[1]
+        "path" , src, "update", basePath+ src
       )
-      img.setAttribute('img',basePath+ src.split("./")[1] )
+      img.setAttribute('src',basePath+ src )
     });
   };
 
