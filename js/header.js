@@ -38,7 +38,7 @@ async function loadHeader() {
   try {
     // Determine if we're in a subdirectory
     const isSubdirectory = window.location.pathname.includes('/pages/');
-    const basePath = isSubdirectory ? '../' : './';
+    const basePath = isSubdirectory ? './' : './';
     
     const response = await fetch(`${basePath}components/header.html`);
     const html = await response.text();
