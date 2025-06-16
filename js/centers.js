@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", () => {
       intervalId = setInterval(() => {
         current = (current + 1) % cards.length;
         showCard(current);
-      }, 10000); 
+      }, 5000); 
     }
 
     function stopAutoSlide() {

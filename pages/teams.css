@@ -1,0 +1,236 @@
+/* Team Page Styles */
+:root {
+  --neon-green: #2ef00c;
+  --neon-green-glow: rgba(46, 240, 12, 0.5);
+  --dark-green: #1a472a;
+  --light-green: #e8f5e9;
+}
+
+.team-section {
+  background: linear-gradient(135deg, var(--light-green) 0%, #ffffff 100%);
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Blob Background Effect */
+.team-section::before {
+  content: '';
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  background: linear-gradient(45deg, var(--neon-green), #01a659);
+  border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+  top: -200px;
+  right: -200px;
+  opacity: 0.1;
+  animation: blobAnimation 8s ease-in-out infinite;
+  z-index: 0;
+}
+
+.team-section::after {
+  content: '';
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  background: linear-gradient(45deg, #01a659, var(--neon-green));
+  border-radius: 40% 60% 70% 30%/40% 70% 30% 60%;
+  bottom: -150px;
+  left: -150px;
+  opacity: 0.1;
+  animation: blobAnimation 8s ease-in-out infinite reverse;
+  z-index: 0;
+}
+
+@keyframes blobAnimation {
+  0% {
+    border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+  }
+  50% {
+    border-radius: 30% 60% 70% 40%/50% 60% 30% 60%;
+  }
+  100% {
+    border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+  }
+}
+
+.team-card {
+  position: relative;
+  background: white;
+  border-radius: 15px;
+  padding: 2rem;
+  transition: all 0.3s ease;
+  overflow: hidden;
+  z-index: 1;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.team-card::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  z-index: -1;
+  border-radius: 16px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  background: linear-gradient(45deg, var(--neon-green), #01a659, var(--neon-green));
+  background-size: 200% 200%;
+}
+
+.team-card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: white;
+  border-radius: 15px;
+  z-index: -1;
+  margin: 2px;
+}
+
+.team-card:hover {
+cursor: pointer;
+  transform: translateY(-10px);
+  box-shadow: 0 20px 30px rgba(39, 250, 2, 0.4);
+}
+
+.team-card:hover::before {
+  opacity: 1;
+  animation: borderRotate 4s linear infinite;
+}
+
+.team-image {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin: 0 auto;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(46, 240, 12, 0.2);
+  position: relative;
+}
+
+.team-image::after {
+  content: '';
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  right: -4px;
+  bottom: -4px;
+  border: 2px solid var(--neon-green);
+  border-radius: 50%;
+  opacity: 0.3;
+}
+
+.team-card:hover .team-image {
+  border-color: var(--neon-green);
+  box-shadow: 0 0 20px var(--neon-green-glow);
+  border: 2px solid var(--neon-green);
+}
+
+.team-name {
+  color: var(--dark-green);
+  font-weight: 700;
+  margin-top: 1.5rem;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+}
+
+.team-name::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--neon-green);
+  transition: width 0.3s ease;
+}
+
+.team-card:hover .team-name {
+  color: var(--neon-green);
+  text-shadow: 0 0 10px var(--neon-green-glow);
+}
+
+.team-card:hover .team-name::after {
+  width: 100%;
+}
+
+.team-role {
+  color: #4a5568;
+  font-weight: 500;
+}
+
+.team-location {
+  color: #718096;
+  font-size: 0.875rem;
+}
+
+/* Animation for the neon border */
+@keyframes borderRotate {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Custom AOS animations */
+[data-aos="team-fade-up"] {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.8s ease;
+}
+
+[data-aos="team-fade-up"].aos-animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Section title styles */
+.section-title {
+  color: var(--dark-green);
+  position: relative;
+  display: inline-block;
+  margin-bottom: 3rem;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 3px;
+  background: var(--neon-green);
+  box-shadow: 0 0 10px var(--neon-green-glow);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .team-card {
+    padding: 1.5rem;
+  }
+  
+  .team-image {
+    width: 150px;
+    height: 150px;
+  }
+
+  .team-section::before,
+  .team-section::after {
+    width: 300px;
+    height: 300px;
+  }
+}
