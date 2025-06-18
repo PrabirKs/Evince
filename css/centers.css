@@ -1,6 +1,7 @@
 .blob-bg {
     position: relative;
     overflow: hidden;
+    width: 100%;
 }
 
 .blob-bg::before {
@@ -19,6 +20,7 @@
 
 .contact-bg {
     background-color: #ace3f0;
+    width: 100%;
 }
 
 .blob-bg > *,
@@ -84,5 +86,33 @@
     }
     100% {
         width: 100%;
+    }
+}
+
+/* Ensure sections take full width */
+section {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+/* Container styles for consistent width */
+.max-w-7xl {
+    width: 100%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+@media (min-width: 768px) {
+    .max-w-7xl {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .max-w-7xl {
+        padding-left: 4rem;
+        padding-right: 4rem;
     }
 }
