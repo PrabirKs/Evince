@@ -34,25 +34,29 @@ const bindNavScript = () => {
   });
 
   // Function to update image paths
-  const updateImagePaths = () => {
+  const updateImageAndLinkPaths = () => {
     // Determine if we're in a subdirectory
     const isSubdirectory = window.location.pathname.includes('/pages/');
     const basePath = isSubdirectory ? '../components/images/' : './components/images/'; // If subdirectory, use "../", else "./"
+    const commonBasePath = isSubdirectory ? "../" : "./"
 
     // Select all images inside social links
     const images = document.querySelectorAll('.social-icon-header img, .logo img');
-
+    const links = document.querySelectorAll('.menu-item, .mobile-menu-item')
     images.forEach((img) => {
       let src = img.getAttribute('src');
-      console.log(
-        "path" , src, "update", basePath+ src
-      )
       img.setAttribute('src',basePath+ src )
     });
+
+    links.forEach((link) => {
+      let href = link.getAttribute('href');
+      //console.log("href", href, " updated:", commonBasePath + href)
+      link.setAttribute("href", commonBasePath + href)
+    })
   };
 
   // Update image paths after the header has been loaded
-  updateImagePaths();
+  updateImageAndLinkPaths();
 };
 
 // Function to load the header component

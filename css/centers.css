@@ -116,3 +116,27 @@ section {
         padding-right: 4rem;
     }
 }
+
+/* Map container and iframe styles */
+.map-container {
+    position: relative;
+    width: 100% !important;
+    min-height: 350px !important;
+    height: 100% !important;
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    background: transparent;
+    z-index: 1;
+}
+
+.map-container iframe {
+    width: 100% !important;
+    height: 100% !important;
+    min-height: 350px !important;
+    border: 0 !important;
+    border-radius: 0.75rem !important;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.08) !important;
+    display: block;
+    background: #fff;
+}
