@@ -155,3 +155,36 @@
 .about-content > div > *:nth-child(7) { animation-delay: 0.7s; }
 .about-content > div > *:nth-child(8) { animation-delay: 0.8s; } 
 
+
+.certificate-section {
+  gap: 2rem;
+}
+
+.certificate-item {
+  width: 220px;         /* Increased width */
+  height: 270px;        /* Increased height */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  background: #fff;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+  padding: 1rem 0.5rem;
+}
+
+.certificate-item img {
+  width: 100%;
+  height: 170px;        /* Increased image height */
+  object-fit: contain;
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+}
+
+.certificate-item span {
+  margin-top: 0.5rem;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #374151;
+}
