@@ -157,7 +157,10 @@
 
 
 .certificate-section {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
+  width: 100%;
 }
 
 .certificate-item {
@@ -171,6 +174,20 @@
   border-radius: 0.5rem;
   box-shadow: 0 2px 8px rgba(0,0,0,0.07);
   padding: 1rem 0.5rem;
+}
+@media (max-width: 640px) {
+  .certificate-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+  }
+  .certificate-item {
+    width: 160px;
+  }
+  .certificate-item img {
+
+  }
 }
 
 .certificate-item img {
