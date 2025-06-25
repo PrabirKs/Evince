@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gallery | Evince</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="stylesheet" href="gallery.css" />
+  </head>
+  <body>
+    <!-- Header container -->
+    <div id="header-container"></div>
+
+    <!-- gallery section -->
+    <section style="padding-top: 120px">
+      <!-- Gallery Page Header with Calligraphy Decoration -->
+      <section
+        class="gallery-header"
+        style="margin-top: 2rem; margin-bottom: 2rem"
+        data-aos="fade-down"
+      >
+        <div
+          style="
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+          "
+        >
+          <!-- Calligraphy decoration before -->
+          <span>
+            <svg width="60" height="24" viewBox="0 0 60 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M2 12C10 2 20 22 30 12C40 2 50 22 58 12" stroke="#007e38" stroke-width="2" stroke-linecap="round" fill="none"/>
+            </svg>
+          </span>
+          <h2
+            style="
+              font-family: 'Playfair Display', serif;
+              font-size: 2.5rem;
+              color: #007e38;
+              margin: 0;
+              letter-spacing: -0.01em;
+            "
+          >
+            Gallery
+          </h2>
+          <!-- Calligraphy decoration after -->
+          <span>
+            <svg width="60" height="24" viewBox="0 0 60 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="transform: scaleX(-1);">
+              <path d="M2 12C10 2 20 22 30 12C40 2 50 22 58 12" stroke="#007e38" stroke-width="2" stroke-linecap="round" fill="none"/>
+            </svg>
+          </span>
+        </div>
+        <p
+          style="
+            text-align: center;
+            color: #333;
+            font-size: 1.1rem;
+            margin-top: 0.7rem;
+          "
+        >
+          Explore our moments: Internship, Activities, and Achievements
+        </p>
+      </section>
+      <main>
+        <!-- Internship Section -->
+        <section class="gallery-section-page" data-aos="fade-up">
+          <div class="gallery-container">
+            <div
+              style="
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 0.5rem;
+                margin-bottom: 0.5rem;
+                flex-direction: column;
+              "
+            >
+              <h3 class="gallery-title" style="margin: 0">Internship</h3>
+              <img src="./../images/svg/decorative-icon.png" alt="decorative divider" style=" display: block; max-width: 320px; width: 100%; height: auto; margin-top:-12px; " />
+            </div>
+            <div class="gallery-grid">
+              <div class="gallery-image-card" data-aos="zoom-in">
+                <img
+                  src="./../images/gallery/gallery2.jpg"
+                  alt="Internship 1"
+                  loading="lazy"
+                  class="gallery-image"
+                />
+              </div>
+              <div
+                class="gallery-image-card"
+                data-aos="zoom-in"
+                data-aos-delay="100"
+              >
+                <img
+                  src="./../images/gallery/gallery2.jpg"
+                  alt="Internship 2"
+                  loading="lazy"
+                  class="gallery-image"
+                />
+              </div>
+              <div
+                class="gallery-image-card"
+                data-aos="zoom-in"
+                data-aos-delay="200"
+              >
+                <img
+                  src="./../images/gallery/gallery2.jpg"
+                  alt="Internship 3"
+                  loading="lazy"
+                  class="gallery-image"
+                />
+              </div>
+              <div
+                class="gallery-image-card"
+                data-aos="zoom-in"
+                data-aos-delay="300"
+              >
+                <img
+                  src="./../images/gallery/gallery2.jpg"
+                  alt="Internship 4"
+                  loading="lazy"
+                  class="gallery-image"
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Activities Section -->
+        <section class="gallery-section-page" data-aos="fade-up">
+          <div class="gallery-container">
+            <div
+              style="
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 0.5rem;
+                margin-bottom: 0.5rem;
+                flex-direction: column;
+              "
+            >
+              <h3 class="gallery-title" style="margin: 0">Activities</h3>
+              <img src="./../images/svg/decorative-icon.png" alt="decorative divider" style=" display: block; max-width: 320px; width: 100%; height: auto; margin-top:-12px; " />
+            </div>
+            <div class="gallery-grid">
+              <div class="gallery-image-card" data-aos="zoom-in">
+                <img
+                  src="./../images/gallery/gallery-demo.jpeg"
+                  alt="Activity 1"
+                  loading="lazy"
+                  class="gallery-image"
+                />
+              </div>
+              <div
+                class="gallery-image-card"
+                data-aos="zoom-in"
+                data-aos-delay="100"
+              >
+                <img
+                  src="./../images/gallery/gallery-demo.jpeg"
+                  alt="Activity 2"
+                  loading="lazy"
+                  class="gallery-image"
+                />
+              </div>
+              <div
+                class="gallery-image-card"
+                data-aos="zoom-in"
+                data-aos-delay="200"
+              >
+                <img
+                  src="./../images/gallery/gallery-demo.jpeg"
+                  alt="Activity 3"
+                  loading="lazy"
+                  class="gallery-image"
+                />
+              </div>
+              <div
+                class="gallery-image-card"
+                data-aos="zoom-in"
+                data-aos-delay="300"
+              >
+                <img
+                  src="./../images/gallery/gallery-demo.jpeg"
+                  alt="Activity 4"
+                  loading="lazy"
+                  class="gallery-image"
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Achievements Section -->
+        <section class="gallery-section-page" data-aos="fade-up">
+          <div class="gallery-container">
+            <div
+              style="
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 0.5rem;
+                margin-bottom: 0.5rem;
+                flex-direction: column;
+              "
+            >
+              <h3 class="gallery-title" style="margin: 0">Achievements</h3>
+              <img src="./../images/svg/decorative-icon.png" alt="decorative divider" style=" display: block; max-width: 320px; width: 100%; height: auto; margin-top:-12px; " />
+            </div>
+            <div class="gallery-grid">
+              <div class="gallery-image-card" data-aos="zoom-in">
+                <img
+                  src="./../images/gallery/gallery-demo.jpeg"
+                  alt="Achievement 1"
+                  loading="lazy"
+                  class="gallery-image"
+                />
+              </div>
+              <div
+                class="gallery-image-card"
+                data-aos="zoom-in"
+                data-aos-delay="100"
+              >
+                <img
+                  src="./../images/gallery/gallery-demo.jpeg"
+                  alt="Achievement 2"
+                  loading="lazy"
+                  class="gallery-image"
+                />
+              </div>
+              <div
+                class="gallery-image-card"
+                data-aos="zoom-in"
+                data-aos-delay="200"
+              >
+                <img
+                  src="./../images/gallery/gallery-demo.jpeg"
+                  alt="Achievement 3"
+                  loading="lazy"
+                  class="gallery-image"
+                />
+              </div>
+              <div
+                class="gallery-image-card"
+                data-aos="zoom-in"
+                data-aos-delay="300"
+              >
+                <img
+                  src="./../images/gallery/gallery-demo.jpeg"
+                  alt="Achievement 4"
+                  loading="lazy"
+                  class="gallery-image"
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </section>
+    <script src="../js/header.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({ once: true });
+    </script>
+  </body>
+</html>

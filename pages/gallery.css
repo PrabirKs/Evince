@@ -1,0 +1,99 @@
+body {
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  /* Animated greenish gradient background */
+  background: linear-gradient(120deg, #e6f9ec 0%, #d0f5e6 50%, #e6f9ec 100%);
+  background-size: 200% 200%;
+  animation: bgMove 8s ease-in-out infinite;
+}
+
+.gallery-image-card {
+  background: linear-gradient(120deg, #e6f9ec 0%, #d0f5e6 50%, #e6f9ec 100%) !important;
+}
+@keyframes bgMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+main{
+    padding: 10px;
+}
+.gallery-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+/* Responsive Gallery Grid */
+.gallery-grid {
+  column-count: 4;
+  column-gap: 2rem;
+  width: 100%;
+  margin-top: 2rem;
+}
+@media (max-width: 1024px) {
+  .gallery-grid {
+    column-count: 2;
+    column-gap: 1.5rem;
+  }
+}
+@media (max-width: 600px) {
+  .gallery-grid {
+    column-count: 2;
+    column-gap: 1rem;
+  }
+}
+.gallery-image-card {
+  display: block;
+  break-inside: avoid;
+  margin-bottom: 2rem;
+  position: relative;
+  overflow: hidden;
+  border-radius: 1rem;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+  background: linear-gradient(120deg, #e6f9ec 0%, #d0f5e6 50%, #e6f9ec 100%);
+
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+}
+.gallery-image-card:hover {
+  transform: scale(1.04);
+  box-shadow: 0 12px 32px rgba(0,126,56,0.18);
+  z-index: 2;
+}
+.gallery-image {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  object-fit: contain;
+  display: block;
+  transition: filter 0.4s, transform 0.4s;
+  filter: grayscale(30%) brightness(0.95);
+  background: #e6f9ec;
+}
+.gallery-image-card:hover .gallery-image {
+  filter: grayscale(0%) brightness(1.05) drop-shadow(0 0 10px #007e38aa);
+  transform: scale(1.07);
+}
+.gallery-title {
+  font-size: 2rem;
+  color: #007e38;
+  margin-bottom: 1rem;
+  text-align: center;
+  font-family: 'Playfair Display', serif;
+  letter-spacing: -0.01em;
+}
+@media (max-width: 600px) {
+  .gallery-title {
+    font-size: 1.3rem;
+    text-align: center;
+  }
+  .gallery-image {
+    max-height: 170px;
+  }
+}
