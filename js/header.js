@@ -33,6 +33,25 @@ const bindNavScript = () => {
     });
   });
 
+  // Mobile About Us dropdown toggle
+  const aboutDropdownToggle = document.getElementById("about-dropdown-toggle");
+  if (aboutDropdownToggle) {
+    aboutDropdownToggle.addEventListener("click", function (e) {
+      e.preventDefault();
+      const parent = this.closest(".mobile-dropdown");
+      parent.classList.toggle("open");
+    });
+  }
+
+  // Close mobile dropdown when another mobile menu item is clicked
+  const mobileMenuLinks = document.querySelectorAll("#mobile-menu .mobile-menu-item");
+  mobileMenuLinks.forEach((item) => {
+    item.addEventListener("click", () => {
+      const dropdown = document.querySelector(".mobile-dropdown");
+      if (dropdown) dropdown.classList.remove("open");
+    });
+  });
+
   // Function to update image paths
   const updateImageAndLinkPaths = () => {
     // Determine if we're in a subdirectory
