@@ -72,6 +72,7 @@
 .mobile-menu-item:hover {
   color: rgb(0, 0, 0);
   font-weight: bold;
+  cursor: pointer;
 }
 .logo {
   max-width: 50px; /* Reduced from 70px */
@@ -200,18 +201,31 @@
   color: white;
 }
 
-/* Mobile dropdown submenu */
-.mobile-submenu {
-  background: #007e38;
-  color: white;
-  border-radius: 0 0 8px 8px;
+.mobile-dropdown .mobile-submenu {
+  display: none;
+  color: inherit;
   margin-top: 0;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
 }
-.mobile-submenu a {
-  color: white;
+.mobile-submenu > li{
+    font-weight: bold;
+ }
+.mobile-submenu > li:hover{
+   color: rgb(55, 80, 221);
 }
-.mobile-submenu a:hover {
-  color: yellow;
+.mobile-dropdown.open .mobile-submenu {
+  display: block;
 }
+.mobile-dropdown .mobile-menu-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.mobile-dropdown .mobile-menu-item span {
+  font-size: 1em;
+  transition: transform 0.3s;
+}
+.mobile-dropdown.open .mobile-menu-item span {
+  transform: rotate(180deg);
+}
+
   

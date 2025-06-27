@@ -17,7 +17,7 @@ const bindNavScript = () => {
     });
 
   // Close mobile menu when a navbar option is clicked
-  const menuItems = document.querySelectorAll("#mobile-menu .mobile-menu-item");
+  const menuItems = document.querySelectorAll("#mobile-menu .mobile-option");
   menuItems.forEach((item) => {
     item.addEventListener("click", () => {
       const menu = document.getElementById("mobile-menu");
@@ -33,24 +33,27 @@ const bindNavScript = () => {
     });
   });
 
-  // Mobile About Us dropdown toggle
-  const aboutDropdownToggle = document.getElementById("about-dropdown-toggle");
-  if (aboutDropdownToggle) {
-    aboutDropdownToggle.addEventListener("click", function (e) {
-      e.preventDefault();
-      const parent = this.closest(".mobile-dropdown");
-      parent.classList.toggle("open");
+  // Mobile About Us dropdown hover logic
+  const mobileDropdown = document.querySelector('.mobile-dropdown');
+  const mobileSubmenu = mobileDropdown ? mobileDropdown.querySelector('.mobile-submenu') : null;
+  if (mobileDropdown && mobileSubmenu) {
+    mobileDropdown.addEventListener('click', function () {
+      mobileDropdown.classList.add('open');
+      mobileSubmenu.style.display = 'block';
+    });
+    mobileDropdown.addEventListener('mouseleave', function () {
+      mobileDropdown.classList.remove('open');
+      mobileSubmenu.style.display = 'none';
+    });
+    mobileSubmenu.addEventListener('mouseenter', function () {
+      mobileDropdown.classList.add('open');
+      mobileSubmenu.style.display = 'block';
+    });
+    mobileSubmenu.addEventListener('mouseleave', function () {
+      mobileDropdown.classList.remove('open');
+      mobileSubmenu.style.display = 'none';
     });
   }
-
-  // Close mobile dropdown when another mobile menu item is clicked
-  const mobileMenuLinks = document.querySelectorAll("#mobile-menu .mobile-menu-item");
-  mobileMenuLinks.forEach((item) => {
-    item.addEventListener("click", () => {
-      const dropdown = document.querySelector(".mobile-dropdown");
-      if (dropdown) dropdown.classList.remove("open");
-    });
-  });
 
   // Function to update image paths
   const updateImageAndLinkPaths = () => {
@@ -61,7 +64,7 @@ const bindNavScript = () => {
 
     // Select all images inside social links
     const images = document.querySelectorAll('.social-icon-header img, .logo img');
-    const links = document.querySelectorAll('.menu-item, .mobile-menu-item')
+    const links = document.querySelectorAll('.menu-item, .mobile-menu-item, .sub-menu-option')
     images.forEach((img) => {
       let src = img.getAttribute('src');
       img.setAttribute('src',basePath+ src )

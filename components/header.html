@@ -81,9 +81,9 @@
           <li class="relative group">
             <a href="index.html#about" class="menu-item">About</a>
             <ul class="absolute hidden group-hover:block bg-white text-black shadow-md mt-1 w-48 z-50 drop-down-about rounded">
-              <li><a href="pages/about.html" class="block px-4 py-2 hover:text-yellow-300">About Clinic</a></li>
+              <li><a href="pages/about.html" class="block px-4 py-2 hover:text-yellow-300 sub-menu-option">About Clinic</a></li>
               <hr style="border: none; border-top: 1px solid #b9bbbf;">
-              <li class="mb-2"><a href="pages/about.html" class="block px-4 py-2 hover:text-yellow-300">About Founder</a></li>
+              <li class="mb-2"><a href="pages/about.html" class="block px-4 py-2 hover:text-yellow-300 sub-menu-option">About Founder</a></li>
             </ul>
           </li>
           
@@ -98,15 +98,22 @@
   
         <!-- Mobile menu (hidden by default) -->
         <ul id="mobile-menu" class="md:hidden py-0 space-y-0 bg-green-400">
-          <li><a href="index.html#home" class="mobile-menu-item">Home</a></li>
-          <li><a href="index.html#about" class="mobile-menu-item">About</a></li>
-          <li><a href="index.html#centers" class="mobile-menu-item">Centers</a></li>
-          <li><a href="index.html#services" class="mobile-menu-item">Services</a></li>
-          <li><a href="pages/teams.html" class="mobile-menu-item">Teams</a></li>
-          <li><a href="index.html#internship" class="mobile-menu-item">Internship</a></li>
-          <li><a href="index.html#contact" class="mobile-menu-item">Contact</a></li>
-          <li><a href="index.html#blog" class="mobile-menu-item">Blog</a></li>
-          <li><a href="pages/gallery.html" class="mobile-menu-item">Gallery</a></li>
+          <li><a href="index.html#home" class="mobile-menu-item mobile-option">Home</a></li>
+          <li class="mobile-dropdown">
+            <p href="#" id="about-dropdown-toggle" class="mobile-menu-item flex items-center justify-between">About <span style="margin-left:8px;">▼</span></p>
+            <ul class="mobile-submenu" style="display:none;">
+              <li><a href="pages/about.html" class="block px-4 py-2 sub-menu-option">About Clinic</a></li>
+              <hr style="border: none; border-top: 1px solid #b9bbbf;">
+              <li class="mb-2"><a href="pages/about.html" class="block px-4 py-2 sub-menu-option">About Founder</a></li>
+            </ul>
+          </li>
+          <li><a href="index.html#centers" class="mobile-menu-item mobile-option">Centers</a></li>
+          <li><a href="index.html#services" class="mobile-menu-item mobile-option">Services</a></li>
+          <li><a href="pages/teams.html" class="mobile-menu-item mobile-option">Teams</a></li>
+          <li><a href="index.html#internship" class="mobile-menu-item mobile-option">Internship</a></li>
+          <li><a href="index.html#contact" class="mobile-menu-item mobile-option">Contact</a></li>
+          <li><a href="index.html#blog" class="mobile-menu-item mobile-option">Blog</a></li>
+          <li><a href="pages/gallery.html" class="mobile-menu-item mobile-option">Gallery</a></li>
         </ul>
       </div>
     </nav>
