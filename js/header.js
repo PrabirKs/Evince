@@ -76,6 +76,35 @@ const bindNavScript = () => {
 
   // Update image paths after the header has been loaded
   updateImageAndLinkPaths();
+
+  // Dropdown hover fix for About menu with 1-second delay on hide
+  const aboutMenu = document.querySelector('.desktop-menu li.group');
+  const aboutDropdown = aboutMenu ? aboutMenu.querySelector('ul') : null;
+  const center = document.getElementsByClassName("center")[0]
+
+  if (aboutMenu && aboutDropdown) {
+    let dropdownTimeout;
+
+    const showDropdown = () => {
+      clearTimeout(dropdownTimeout);
+      aboutDropdown.style.display = 'block';
+    };
+
+    const hideDropdown = () => {
+      dropdownTimeout = setTimeout(() => {
+        aboutDropdown.style.display = 'none';
+      }, 1000); // 1 second delay
+    };
+    const hideDropdown2 = () => {
+        aboutDropdown.style.display = 'none';
+    };
+
+    aboutMenu.addEventListener('mouseenter', showDropdown);
+    aboutMenu.addEventListener('mouseleave', hideDropdown);
+    aboutDropdown.addEventListener('mouseenter', showDropdown);
+    aboutDropdown.addEventListener('mouseleave', hideDropdown2);
+    center.addEventListener("mouseenter",hideDropdown2);
+  }
 };
 
 // Function to load the header component

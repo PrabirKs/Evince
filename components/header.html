@@ -78,8 +78,16 @@
           class="desktop-menu hidden md:flex justify-center space-x-4 lg:space-x-6 p-4 text-sm md:text-md font-medium"
         >
           <li><a href="index.html#home" class="menu-item">Home</a></li>
-          <li><a href="index.html#about" class="menu-item">About Us</a></li>
-          <li><a href="index.html#centers" class="menu-item">Centers</a></li>
+          <li class="relative group">
+            <a href="index.html#about" class="menu-item">About</a>
+            <ul class="absolute hidden group-hover:block bg-white text-black shadow-md mt-1 w-48 z-50 drop-down-about rounded">
+              <li><a href="pages/about.html" class="block px-4 py-2 hover:text-yellow-300">About Clinic</a></li>
+              <hr style="border: none; border-top: 1px solid #b9bbbf;">
+              <li class="mb-2"><a href="pages/about.html" class="block px-4 py-2 hover:text-yellow-300">About Founder</a></li>
+            </ul>
+          </li>
+          
+          <li><a href="index.html#centers" class="menu-item center">Centers</a></li>
           <li><a href="index.html#services" class="menu-item">Services</a></li>
           <li><a href="pages/teams.html" class="menu-item">Teams</a></li>
           <li><a href="index.html#internship" class="menu-item">Internship</a></li>
@@ -91,7 +99,7 @@
         <!-- Mobile menu (hidden by default) -->
         <ul id="mobile-menu" class="md:hidden py-0 space-y-0 bg-green-400">
           <li><a href="index.html#home" class="mobile-menu-item">Home</a></li>
-          <li><a href="index.html#about" class="mobile-menu-item">About Us</a></li>
+          <li><a href="index.html#about" class="mobile-menu-item">About</a></li>
           <li><a href="index.html#centers" class="mobile-menu-item">Centers</a></li>
           <li><a href="index.html#services" class="mobile-menu-item">Services</a></li>
           <li><a href="pages/teams.html" class="mobile-menu-item">Teams</a></li>
