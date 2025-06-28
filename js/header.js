@@ -38,8 +38,13 @@ const bindNavScript = () => {
   const mobileSubmenu = mobileDropdown ? mobileDropdown.querySelector('.mobile-submenu') : null;
   if (mobileDropdown && mobileSubmenu) {
     mobileDropdown.addEventListener('click', function () {
-      mobileDropdown.classList.add('open');
-      mobileSubmenu.style.display = 'block';
+      if(mobileDropdown.classList.contains('open')){
+        mobileDropdown.classList.remove('open');
+        mobileSubmenu.style.display = 'none';
+      }else{
+        mobileDropdown.classList.add('open');
+        mobileSubmenu.style.display = 'block';
+      }
     });
     mobileDropdown.addEventListener('mouseleave', function () {
       mobileDropdown.classList.remove('open');

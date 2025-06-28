@@ -205,15 +205,22 @@
   display: none;
   color: inherit;
   margin-top: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 1s ease-in-out, opacity 1s ease-in-out;
+  opacity: 0;
 }
 .mobile-submenu > li{
     font-weight: bold;
+    margin-left: 10px;
  }
 .mobile-submenu > li:hover{
    color: rgb(55, 80, 221);
 }
 .mobile-dropdown.open .mobile-submenu {
   display: block;
+  max-height: 200px; /* Adjust based on your content height */
+  opacity: 1;
 }
 .mobile-dropdown .mobile-menu-item {
   display: flex;
