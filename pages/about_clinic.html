@@ -412,7 +412,8 @@
       function animateNumbers() {
         const numbers = document.querySelectorAll('.metric-number');
         numbers.forEach(number => {
-          const target = parseInt(number.getAttribute('data-count'));
+          const target = parseFloat(number.getAttribute('data-count'));
+          const isDecimal = target % 1 !== 0;
           const increment = target / 100;
           let current = 0;
           
@@ -422,8 +423,14 @@
               current = target;
               clearInterval(timer);
             }
-            number.textContent = Math.floor(current);
-          }, 20);
+            
+            // Display with proper decimal places for decimal values
+            if (isDecimal) {
+              number.textContent = current.toFixed(1);
+            } else {
+              number.textContent = Math.floor(current);
+            }
+          }, 30);
         });
       }
 
