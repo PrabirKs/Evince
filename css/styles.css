@@ -4,6 +4,14 @@ section {
   overflow-x: hidden;
 }
 
+/* Enable smooth scrolling globally */
+html {
+  scroll-behavior: smooth;
+}
+:root {
+  scroll-padding-top: 80px; /* adjust based on your navbar height */
+}
+
 /* Fixed Header and Navbar */
 body {
   padding-top: 120px; /* Add padding to body to account for fixed header */
@@ -191,7 +199,7 @@ body {
     0 0 0 1px rgba(255, 255, 255, 0.2) inset;
   padding: 1.5rem 1rem;
   transition: all 0.3s ease;
-  border: 1px solid rgba(174, 170, 170, 0.3);
+  border: 2px solid rgba(35, 34, 34, 0.25);
   display: flex;
   flex-direction: column;
   height: 100%;

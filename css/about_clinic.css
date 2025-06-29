@@ -1,0 +1,528 @@
+/* About Clinic Page Styles */
+
+/* Hero Section */
+.hero-section {
+  background: linear-gradient(135deg, #4a9bde7d 0%, #589be74a 100%);
+  color: rgb(0, 0, 0);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-section > div {
+  position: relative;
+  z-index: 2;
+}
+
+.section-title {
+  background: linear-gradient(45deg, #000000, #333333);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 1.2;
+}
+
+.section-title span {
+  display: block;
+}
+
+.clinic-image-container {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  transform: perspective(1000px) rotateY(-5deg);
+  transition: transform 0.3s ease;
+}
+
+.clinic-image-container:hover {
+  transform: perspective(1000px) rotateY(0deg);
+}
+
+.clinic-image {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.clinic-image-container:hover .clinic-image {
+  transform: scale(1.05);
+}
+
+/* Buttons */
+.btn-appointment {
+  background: linear-gradient(45deg, #18b910, #209605);
+  color: white;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(16, 185, 129, 0.3);
+}
+
+.btn-appointment:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(16, 185, 129, 0.925);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: rgb(0, 0, 0);
+  padding: 12px 30px;
+  border: 2px solid rgb(0, 0, 0);
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.1s ease;
+}
+
+.btn-secondary:hover {
+  transform: translateY(-2px);
+  background: rgb(234, 248, 252);
+  color: #000000;
+  border: 2px solif #46b8e9;
+}
+
+/* Metrics Section */
+.metrics-section {
+  background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
+  position: relative;
+}
+
+.metrics-section > div {
+  position: relative;
+  z-index: 2;
+}
+
+.metrics-section h2 {
+  color: #000000;
+}
+
+.metric-card {
+  background: white;
+  padding: 30px 20px;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.metric-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+  transition: left 0.5s ease;
+}
+
+.metric-card:hover::before {
+  left: 100%;
+}
+
+.metric-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.metric-icon {
+  color: #22c55e;
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+}
+
+.metric-number {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #2d3748;
+  margin-bottom: 10px;
+  background: linear-gradient(45deg, #22c55e, #16a34a);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.metric-label {
+  font-size: 1rem;
+  color: #718096;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero-section {
+    padding: 40px 20px 20px 20px;
+    margin-top: 0px !important;
+    top: 0px !important;
+  }
+  
+  .hero-section .grid {
+    grid-template-columns: 1fr !important;
+    gap: 2rem;
+  }
+  
+  .section-title {
+    font-size: 2.5rem;
+  }
+  
+  .clinic-image {
+    height: 300px;
+  }
+  
+  .metric-card {
+    padding: 20px 15px;
+  }
+  
+  .metric-number {
+    font-size: 2rem;
+  }
+  
+  .metric-label {
+    font-size: 0.9rem;
+  }
+  
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .section-title {
+    font-size: 2rem;
+  }
+  
+  .clinic-image {
+    height: 250px;
+  }
+  
+  .btn-appointment,
+  .btn-secondary {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+  
+  .metric-card {
+    padding: 15px 10px;
+  }
+  
+  .metric-number {
+    font-size: 1.5rem;
+  }
+  
+  .metric-label {
+    font-size: 0.8rem;
+  }
+}
+
+/* Animation for metric numbers */
+@keyframes countUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.metric-number {
+  animation: countUp 0.8s ease-out;
+}
+
+/* Loading animation for images */
+.clinic-image {
+  opacity: 0;
+  animation: fadeIn 1s ease-in forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Hover effects for better interactivity */
+.metric-card:hover .metric-icon {
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
+}
+
+.metric-card:hover .metric-number {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+}
+
+/* Accessibility improvements */
+@media (prefers-reduced-motion: reduce) {
+  .clinic-image-container,
+  .metric-card,
+  .btn-appointment,
+  .btn-secondary {
+    transition: none;
+  }
+  
+  .clinic-image-container:hover {
+    transform: none;
+  }
+  
+  .metric-card:hover {
+    transform: none;
+  }
+}
+
+/* Focus states for better accessibility */
+.btn-appointment:focus,
+.btn-secondary:focus {
+  outline: 3px solid #22c55e;
+  outline-offset: 2px;
+}
+
+/* Print styles */
+@media print {
+  .hero-section {
+    background: white !important;
+    color: black !important;
+  }
+  
+  .metrics-section {
+    background: white !important;
+  }
+  
+  .metric-card {
+    box-shadow: none;
+    border: 1px solid #e2e8f0;
+  }
+}
+
+/* Services Section Glassmorphism Styles */
+.service-section {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  position: relative;
+}
+
+.service-category {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  padding: 2rem;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.service-category::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.6s ease;
+}
+
+.service-category:hover::before {
+  left: 100%;
+}
+
+.service-category:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+  background: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.category-header {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  position: relative;
+  z-index: 2;
+}
+
+.category-header h3 {
+  color: #000000;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.service-category:hover .category-header h3 {
+  transform: scale(1.05);
+  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.category-services {
+  position: relative;
+  z-index: 2;
+}
+
+.service-item {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 1rem;
+  margin-bottom: 0.75rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.service-item:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateX(5px);
+  border-color: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.service-content h4 {
+  color: #000000;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0 0 0.25rem 0;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.service-content p {
+  color: #333333;
+  font-size: 0.9rem;
+  margin: 0;
+  font-weight: 400;
+}
+
+/* Centers Section Styles */
+.center-card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+  padding: 2rem;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.center-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.6s ease;
+}
+
+.center-card:hover::before {
+  left: 100%;
+}
+
+.center-card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+  background: rgba(255, 255, 255, 0.15);
+  border-color: rgba(0, 0, 0, 0.3);
+}
+
+.center-card h3 {
+  color: #000000;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.center-card:hover h3 {
+  transform: scale(1.05);
+  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.apply-btn {
+  background: linear-gradient(45deg, #18b910, #209605);
+  border: none;
+  font-weight: 600;
+  text-decoration: none;
+  box-shadow: 0 4px 15px rgba(24, 185, 16, 0.3);
+}
+
+.apply-btn:hover {
+  background: linear-gradient(45deg, #209605, #18b910);
+  box-shadow: 0 8px 25px rgba(24, 185, 16, 0.4);
+}
+
+/* Responsive adjustments for services */
+@media (max-width: 768px) {
+  .service-category {
+    padding: 1.5rem;
+  }
+  
+  .category-header h3 {
+    font-size: 1.3rem;
+  }
+  
+  .service-content h4 {
+    font-size: 1rem;
+  }
+  
+  .service-content p {
+    font-size: 0.85rem;
+  }
+  
+  .center-card {
+    padding: 1.5rem;
+  }
+  
+  /* Force single column layout on mobile */
+  .centers-cards {
+    grid-template-columns: 1fr !important;
+  }
+  
+  .service-section .grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .service-category {
+    padding: 1rem;
+  }
+  
+  .center-card {
+    padding: 1rem;
+  }
+  
+  .category-header h3 {
+    font-size: 1.2rem;
+  }
+  
+  .service-content h4 {
+    font-size: 0.95rem;
+  }
+  
+  .service-content p {
+    font-size: 0.8rem;
+  }
+}

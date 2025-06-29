@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Our Clinic - Evince Psychological Clinic</title>
+    <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="stylesheet" href="../css/about_clinic.css" />
+    <link rel="stylesheet" href="../css/header.css">
+  </head>
+  <body>
+    <!-- Header container -->
+    <div id="header-container"></div>
+
+    <!-- Hero Section -->
+    <section class="hero-section py-16 px-4 md:px-8">
+      <div class="max-w-7xl mx-auto">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div data-aos="fade-right">
+            <h1 class="text-4xl md:text-5xl font-bold section-title mb-6">
+              <span>About</span>
+              <span>Evince Psychological Clinic</span>
+            </h1>
+            <p class="text-xl text-gray-600 mb-8 leading-relaxed">
+              A leading psychological clinic dedicated to providing compassionate mental health care 
+              with evidence-based treatments and personalized therapeutic approaches.
+            </p>
+            <div class="flex flex-wrap gap-4">
+              <button class="btn-appointment" onclick="window.open('https://wa.me/917978266320?text=Hii%2C%0AI%20want%20to%20have%20an%20appointment%20with%20you.%0AThank%20You.', '_blank')">Book Appointment</button>
+              <button class="btn-secondary" onclick="window.location.href='about.html'">About Founder</button>
+            </div>
+          </div>
+          <div class="clinic-image-container" data-aos="fade-left">
+            <img src="../images/gallery/gallery-demo.jpeg" alt="Evince Psychological Clinic" class="clinic-image">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Key Metrics Section -->
+    <section class="metrics-section py-16 px-4 md:px-8">
+      <div class="max-w-7xl mx-auto">
+        <div class="text-center mb-12" data-aos="fade-up">
+          <h2 class="text-3xl md:text-4xl font-bold section-title mb-4">Our Impact in Numbers</h2>
+          <p class="text-xl text-gray-600">Trusted by thousands of patients across Odisha</p>
+        </div>
+        
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
+          <div class="metric-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="metric-icon">
+              <img src="../images/svg/therapist.svg" alt="Therapist Icon" class="w-12 h-12">
+            </div>
+            <div class="metric-number" data-count="15">0</div>
+            <div class="metric-label">Experienced Therapists</div>
+          </div>
+
+          <div class="metric-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="metric-icon">
+              <img src="../images/svg/consultant.svg" alt="Consultant Icon" class="w-12 h-12">
+            </div>
+            <div class="metric-number" data-count="8">0</div>
+            <div class="metric-label">Consultants</div>
+          </div>
+
+          <div class="metric-card" data-aos="fade-up" data-aos-delay="300">
+            <div class="metric-icon">
+                <img src="../images/svg/review.svg" alt="Therapist Icon" class="w-12 h-12">
+              </div>
+            <div class="metric-number" data-count="2000">0</div>
+            <div class="metric-label">Total Reviews</div>
+          </div>
+
+          <div class="metric-card" data-aos="fade-up" data-aos-delay="400">
+            <div class="metric-icon">
+                <img src="../images/svg/rating.svg" alt="Therapist Icon" class="w-12 h-12">
+              </div>
+            <div class="metric-number" data-count="4.8">0</div>
+            <div class="metric-label">Google Rating</div>
+          </div>
+
+          <div class="metric-card" data-aos="fade-up" data-aos-delay="500">
+            <div class="metric-icon">
+                <img src="../images/svg/served.svg" alt="Therapist Icon" class="w-12 h-12">
+              </div>
+            <div class="metric-number" data-count="1500">0</div>
+            <div class="metric-label">People Served</div>
+          </div>
+
+          <div class="metric-card" data-aos="fade-up" data-aos-delay="600">
+            <div class="metric-icon">
+              <img src="../images/svg/consultations.svg" alt="Consultations Icon" class="w-12 h-12">
+            </div>
+            <div class="metric-number" data-count="250">0</div>
+            <div class="metric-label">Consultations</div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- centers section -->
+    <section id="centers" class="py-16 px-4 md:px-8 lg:px-16 bg-white">
+        <!-- Blob Background -->
+        <div class="absolute inset-0 -z-10">
+          <svg
+            viewBox="0 0 200 200"
+            xmlns="http://www.w3.org/2000/svg"
+            class="absolute -top-20 -right-20 w-96 h-96 text-blue-100 opacity-50"
+          >
+            <path
+              fill="currentColor"
+              d="M45.1,-65.1C58.2,-55.8,68.8,-42.3,73.9,-27.1C79,-11.9,78.6,5,73.4,19.8C68.2,34.6,58.2,47.2,45.3,55.1C32.4,63,16.2,66.2,0.2,65.9C-15.8,65.6,-31.6,61.8,-45.1,53.9C-58.6,46,-69.8,34,-75.1,19.4C-80.4,4.8,-79.8,-12.4,-72.8,-26.8C-65.8,-41.2,-52.4,-52.8,-38.1,-61.8C-23.8,-70.8,-8.7,-77.2,5.2,-83.8C19.1,-90.4,38.2,-97.2,45.1,-65.1Z"
+              transform="translate(100 100)"
+            />
+          </svg>
+          <svg
+            viewBox="0 0 200 200"
+            xmlns="http://www.w3.org/2000/svg"
+            class="absolute -bottom-20 -left-20 w-96 h-96 text-blue-100 opacity-50"
+          >
+            <path
+              fill="currentColor"
+              d="M45.1,-65.1C58.2,-55.8,68.8,-42.3,73.9,-27.1C79,-11.9,78.6,5,73.4,19.8C68.2,34.6,58.2,47.2,45.3,55.1C32.4,63,16.2,66.2,0.2,65.9C-15.8,65.6,-31.6,61.8,-45.1,53.9C-58.6,46,-69.8,34,-75.1,19.4C-80.4,4.8,-79.8,-12.4,-72.8,-26.8C-65.8,-41.2,-52.4,-52.8,-38.1,-61.8C-23.8,-70.8,-8.7,-77.2,5.2,-83.8C19.1,-90.4,38.2,-97.2,45.1,-65.1Z"
+              transform="translate(100 100)"
+            />
+          </svg>
+        </div>
+        <div class="max-w-7xl mx-auto">
+          <h2
+            class="text-3xl md:text-4xl font-bold text-gray-800 mb-8 text-center"
+            data-aos="zoom-in"
+          >
+            Our Centers
+          </h2>
+    
+          <div class="centers-container">
+            <!-- Centers Content as Cards -->
+            <div class="centers-cards grid grid-cols-1 md:grid-cols-3 gap-8" data-aos="fade-up">
+              <!-- Bhubaneswar Center Card -->
+              <div class="center-card">
+                <div class="flex flex-col items-center gap-4 h-full">
+                  <div class="map-container w-full">
+                    <iframe
+                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3743.437019776155!2d85.80553490909244!3d20.240702481140346!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a19a7b63cb09ca3%3A0x723e72c67bc726f8!2sEvince%20Psychological%20Clinic%20-%20Bhubaneswar!5e0!3m2!1sen!2sin!4v1749182256830!5m2!1sen!2sin"
+                      width="100%"
+                      height="200"
+                      style="border: 0"
+                      allowfullscreen=""
+                      loading="lazy"
+                      class="rounded-lg shadow-lg"
+                    ></iframe>
+                  </div>
+                  <h3 class="text-2xl font-bold text-gray-800 text-center">Bhubaneswar Center</h3>
+                  <a class="apply-btn text-white px-6 py-2 rounded-lg mx-auto block text-center transition-all duration-300 transform hover:scale-105 hover:shadow-lg" href="./bhubaneswar.html">Visit Center Page</a>
+                </div>
+              </div>
+              <!-- Cuttack Center Card -->
+              <div class="center-card">
+                <div class="flex flex-col items-center gap-4 h-full">
+                  <div class="map-container w-full">
+                    <iframe
+                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3738.19318372097!2d85.86821160910067!3d20.45725718097385!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a190dd8b317a729%3A0xf0f9e01b4bca32a8!2sEvince%20Psychological%20Clinic%20-%20Cuttack!5e0!3m2!1sen!2sin!4v1749182316739!5m2!1sen!2sin"
+                      width="100%"
+                      height="200"
+                      style="border: 0"
+                      allowfullscreen=""
+                      loading="lazy"
+                      class="rounded-lg shadow-lg"
+                    ></iframe>
+                  </div>
+                  <h3 class="text-2xl font-bold text-gray-800 text-center">Cuttack Center</h3>
+                  <a class="apply-btn text-white px-6 py-2 rounded-lg mx-auto block text-center transition-all duration-300 transform hover:scale-105 hover:shadow-lg" href="./cuttack.html">Visit Center Page</a>
+                </div>
+              </div>
+              <!-- Puri Center Card -->
+              <div class="center-card">
+                <div class="flex flex-col items-center gap-4 h-full">
+                  <div class="map-container w-full">
+                    <iframe
+                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3743.437019776155!2d85.80553490909244!3d20.240702481140346!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a19a7b63cb09ca3%3A0x723e72c67bc726f8!2sEvince%20Psychological%20Clinic%20-%20Bhubaneswar!5e0!3m2!1sen!2sin!4v1749182256830!5m2!1sen!2sin"
+                      width="100%"
+                      height="200"
+                      style="border: 0"
+                      allowfullscreen=""
+                      loading="lazy"
+                      class="rounded-lg shadow-lg"
+                    ></iframe>
+                  </div>
+                  <h3 class="text-2xl font-bold text-gray-800 text-center">Puri Center</h3>
+                  <a class="apply-btn text-white px-6 py-2 rounded-lg mx-auto block text-center transition-all duration-300 transform hover:scale-105 hover:shadow-lg" href="./puri.html">Visit Center Page</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section
+    id="services"
+    class="py-16 px-4 md:px-8 lg:px-16 relative overflow-hidden service-section"
+    >
+    <!-- Blob Background -->
+    <div class="absolute inset-0 -z-10">
+        <svg
+        viewBox="0 0 200 200"
+        xmlns="http://www.w3.org/2000/svg"
+        class="absolute -bottom-20 -left-20 w-96 h-96 text-blue-100 opacity-50"
+        >
+        <path
+            fill="currentColor"
+            d="M45.1,-65.1C58.2,-55.8,68.8,-42.3,73.9,-27.1C79,-11.9,78.6,5,73.4,19.8C68.2,34.6,58.2,47.2,45.3,55.1C32.4,63,16.2,66.2,0.2,65.9C-15.8,65.6,-31.6,61.8,-45.1,53.9C-58.6,46,-69.8,34,-75.1,19.4C-80.4,4.8,-79.8,-12.4,-72.8,-26.8C-65.8,-41.2,-52.4,-52.8,-38.1,-61.8C-23.8,-70.8,-8.7,-77.2,5.2,-83.8C19.1,-90.4,38.2,-97.2,45.1,-65.1Z"
+            transform="translate(100 100)"
+        />
+        </svg>
+    </div>
+
+    <div class="max-w-7xl mx-auto">
+        <h2
+        class="text-3xl md:text-4xl font-bold text-gray-800 mb-12 text-center"
+        data-aos="zoom-in"
+        >
+        Our Services
+        </h2>
+
+        <!-- Service Categories -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Child & Adolescent Care -->
+        <div class="service-category" data-aos="fade-up" data-aos-delay="100">
+            <div class="category-header">
+            <h3 class="text-2xl font-bold text-gray-800">Child & Adolescent Care</h3>
+            </div>
+            <div class="category-services">
+            <div class="service-item">
+                <div class="service-content">
+                <h4>Autism & Neurodevelopmental</h4>
+                <p>Specialized Care</p>
+                </div>
+            </div>
+            <div class="service-item">
+                <div class="service-content">
+                <h4>Special Education</h4>
+                <p>Speech Therapy</p>
+                </div>
+            </div>
+            <div class="service-item">
+                <div class="service-content">
+                <h4>Child Assessments</h4>
+                <p>VSMS, INCLEN, ISAA</p>
+                </div>
+            </div>
+            </div>
+        </div>
+        <!-- Personal Mental Health -->
+        <div class="service-category" data-aos="fade-up" data-aos-delay="200">
+            <div class="category-header">
+            <h3 class="text-2xl font-bold text-gray-800">Personal Mental Health</h3>
+            </div>
+            <div class="category-services">
+            <div class="service-item">
+                <div class="service-content">
+                <h4>Anxiety & Depression</h4>
+                <p>GAD, SAD, OCD, PTSD</p>
+                </div>
+            </div>
+            <div class="service-item">
+                <div class="service-content">
+                <h4>Stress Management</h4>
+                <p>Anger and Pain Management</p>
+                </div>
+            </div>
+            <div class="service-item">
+                <div class="service-content">
+                <h4>Sleep Disorders</h4>
+                <p>Adjustment Issues</p>
+                </div>
+            </div>
+            </div>
+        </div>
+
+        <!-- Relationship & Emotional Well-being -->
+        <div class="service-category" data-aos="fade-up" data-aos-delay="300">
+            <div class="category-header">
+            <h3 class="text-2xl font-bold text-gray-800">Relationship & Emotional Well-being</h3>
+            </div>
+            <div class="category-services">
+            <div class="service-item">
+                <div class="service-content">
+                <h4>Marriage & Divorce</h4>
+                <p>Professional Counselling</p>
+                </div>
+            </div>
+            <div class="service-item">
+                <div class="service-content">
+                <h4>Intimacy Issues</h4>
+                <p>Emotional Abuse Support</p>
+                </div>
+            </div>
+            <div class="service-item">
+                <div class="service-content">
+                <h4>Relationship Conflict</h4>
+                <p>Trust Issues Resolution</p>
+                </div>
+            </div>
+            </div>
+        </div>
+
+        <!-- Addiction & Behavioral Recovery -->
+        <div class="service-category" data-aos="fade-up" data-aos-delay="400">
+            <div class="category-header">
+            <h3 class="text-2xl font-bold text-gray-800">Addiction & Behavioral Recovery</h3>
+            </div>
+            <div class="category-services">
+            <div class="service-item">
+                <div class="service-content">
+                <h4>Substance Addiction</h4>
+                <p>Drug Addiction Counselling</p>
+                </div>
+            </div>
+            <div class="service-item">
+                <div class="service-content">
+                <h4>Pornography Addiction</h4>
+                <p>Recovery Support</p>
+                </div>
+            </div>
+            <div class="service-item">
+                <div class="service-content">
+                <h4>Impulse Control</h4>
+                <p>Habit Disorders</p>
+                </div>
+            </div>
+            </div>
+        </div>
+
+        <!-- Psychological Assessments -->
+        <div class="service-category" data-aos="fade-up" data-aos-delay="450">
+            <div class="category-header">
+            <h3 class="text-2xl font-bold text-gray-800">Psychological Assessments</h3>
+            </div>
+            <div class="category-services">
+            <div class="service-item">
+                <div class="service-content">
+                <h4>IQ & Personality</h4>
+                <p>Psychometric Testing</p>
+                </div>
+            </div>
+            <div class="service-item">
+                <div class="service-content">
+                <h4>Neuropsychological</h4>
+                <p>Diagnostic Clarification</p>
+                </div>
+            </div>
+            <div class="service-item">
+                <div class="service-content">
+                <h4>Emotional Profiling</h4>
+                <p>Behavioral Assessment</p>
+                </div>
+            </div>
+            </div>
+        </div>
+
+        <!-- Life Transitions & Adjustment -->
+        <div class="service-category" data-aos="fade-up" data-aos-delay="500">
+            <div class="category-header">
+            <h3 class="text-2xl font-bold text-gray-800">Life Transitions & Adjustment</h3>
+            </div>
+            <div class="category-services">
+            <div class="service-item">
+                <div class="service-content">
+                <h4>Grief & Loss</h4>
+                <p>Major Life Changes</p>
+                </div>
+            </div>
+            <div class="service-item">
+                <div class="service-content">
+                <h4>Career Stress</h4>
+                <p>Academic Management</p>
+                </div>
+            </div>
+            <div class="service-item">
+                <div class="service-content">
+                <h4>Self-Esteem</h4>
+                <p>Motivation Challenges</p>
+                </div>
+            </div>
+            </div>
+        </div>
+        </div>
+    </div>
+    </section>
+  
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="../js/header.js"></script>
+    <script>
+      AOS.init({
+        duration: 1000,
+        once: true
+      });
+
+      // Animate numbers
+      function animateNumbers() {
+        const numbers = document.querySelectorAll('.metric-number');
+        numbers.forEach(number => {
+          const target = parseInt(number.getAttribute('data-count'));
+          const increment = target / 100;
+          let current = 0;
+          
+          const timer = setInterval(() => {
+            current += increment;
+            if (current >= target) {
+              current = target;
+              clearInterval(timer);
+            }
+            number.textContent = Math.floor(current);
+          }, 20);
+        });
+      }
+
+      // Trigger animation when section is visible
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            animateNumbers();
+            observer.unobserve(entry.target);
+          }
+        });
+      });
+
+      const metricsSection = document.querySelector('.metrics-section');
+      if (metricsSection) {
+        observer.observe(metricsSection);
+      }
+    </script>
+  </body>
+</html>
